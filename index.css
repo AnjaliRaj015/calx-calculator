@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(390deg, rgb(0, 0, 0), rgb(90, 5, 5));
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 60px);
+}
+
+.calculator-grid>button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px, solid #FFFFFF;
+    outline: none;
+    background-color: rgb(0, 0, 0);
+}
+button{
+    color: #ffffff;
+    outline: none;
+}
+
+.calculator-grid>button:hover {
+    background-color: #ffffff;
+    color: black;
+    transition: 0.6s ease-in-out;
+}
+
+.span-two {
+    grid-column: span 2;
+    color: #f80212;
+    background-color: rgba(139, 0, 139, 0.8);
+    font-weight: 700;
+}
+.span-one {
+    color: #f80212;
+    font-weight: 700;
+}
+.output {
+    grid-column: 1 / -1;
+	background: rgb(160, 4, 4);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
+.main-btn{
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #490c1c;
+    border-radius: 10px;
+    color: #fff;
+    margin-top: 3%;
+    transition: 0.6s ease-in-out;
+    margin-left: 80%;
+    font-size: 20px;
+}
+.main-btn:hover{
+    box-shadow: 5px 10px 30px #9b1e1e;
+    background-color: #9b1e1e;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: black;
+}
+::-webkit-scrollbar-thumb{
+    background-color: orange;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: orangered;
+}
+footer{
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color: rgb(95, 92, 93);
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+@media (max-width:700px) {
+    nav{
+        padding-left:500px;
+    }
+}
